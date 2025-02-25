@@ -1,4 +1,8 @@
 # Conway's Game of Life
+# Implements Conway's Game of Life rules:
+# Live cell with 2 or 3 neighbors → Stays alive.
+# Dead cell with exactly 3 neighbors → Becomes alive.
+# All other cases → Dies or remains dead.
 import random, time, copy
 WIDTH = 60
 HEIGHT = 20
