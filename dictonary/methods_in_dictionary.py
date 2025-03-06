@@ -36,3 +36,10 @@ picnicItems = {'apples': 5, 'cups': 2}
 print('I am bringing ' + str(picnicItems.get('cups', 0)) + ' cups.')  
 print('I am bringing ' + str(picnicItems.get('eggs', 0)) + ' eggs.')
 #here 0 is the default value now eggs is not present in the dictionary so it will take the defult value
+
+##setdefault() Method
+spam = {'name': 'Pooka', 'age': 5}
+spam.setdefault('color', 'black')
+print(spam)
+spam.setdefault('color', 'white') ## color is not changed it remains default black
+print(spam)
