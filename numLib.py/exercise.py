@@ -27,3 +27,19 @@ print(np.ones_like(X))
 X = np.arange(4, dtype=np.int8)
 
 print(np.zeros_like(X))
+
+#Create a numpy matrix of 4*4 integers, filled with fives.
+
+c=np.ones([4,4],dtype=np.int8)*5
+print(c)
+
+
+#Given the X numpy matrix, create a new numpy matrix with the same shape and type as X, filled with sevens.
+X= np.array([[2,3], [6,2]],dtype=np.int8)
+print(X)
+print(np.ones_like(X)*7)
+
+#Create a 3*3 identity numpy matrix with ones on the diagonal and zeros elsewhere.
+# following two ways
+#np.eye(3)
+print(np.eye(3))
