@@ -43,3 +43,7 @@ print(np.ones_like(X)*7)
 # following two ways
 #np.eye(3)
 print(np.eye(3))
+
+X = np.array(['A','B','C','D','E'])
+
+X[1:-1]
