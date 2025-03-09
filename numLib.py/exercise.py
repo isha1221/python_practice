@@ -44,6 +44,17 @@ print(np.ones_like(X)*7)
 #np.eye(3)
 print(np.eye(3))
 
+# Given the X numpy array, show all middle elements
 X = np.array(['A','B','C','D','E'])
 
-X[1:-1]
+print(X[1:-1])
+
+# Given the X numpy matrix, show the last row elements
+X = np.array([
+    [1,   2,  3,  4],
+    [5,   6,  7,  8],
+    [9,  10, 11, 12],
+    [13, 14, 15, 16]
+])
+
+print(X[-1])
