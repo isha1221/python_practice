@@ -55,6 +55,14 @@ X = np.array([
     [5,   6,  7,  8],
     [9,  10, 11, 12],
     [13, 14, 15, 16]
+    
+    
 ])
 
 print(X[-1])
+
+
+#Show the memory size of the given Z numpy matrix
+Z = np.zeros((10,10))
+
+print("%d bytes" % (Z.size * Z.itemsize))
