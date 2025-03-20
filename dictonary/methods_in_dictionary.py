@@ -11,6 +11,13 @@ for k in spam.keys():
 
 for i in spam.items():
   print(i)
+
+user = {'name': 'Isha', 'age': 25, 'city': 'Nagpur'}
+
+# Iterating over key-value pairs using .items()
+for key, value in user.items():
+    print(f"{key}: {value}")
+  
   
   
 ##NOTE: the values in the dict_items value returned by the items() method are tuples of the key and value
@@ -43,3 +50,4 @@ spam.setdefault('color', 'black')
 print(spam)
 spam.setdefault('color', 'white') ## color is not changed it remains default black
 print(spam)
+

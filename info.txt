@@ -1,0 +1,12 @@
+numpy over list:
+
+->Numpy faster than list {coz}:
+-->1. it uses fixed types so there is no type checking when iterrating through object
+-->2. it uses less bytes of memory 
+-->3. it has contiguous memory{use}:
+      -->1. easier SIMD vector processing
+      -->2. effective chace ustilization
+
+
+
+      
