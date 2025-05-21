@@ -1,6 +1,6 @@
 def list_comp(x,y,z,n):
    
-    
+
     # ans=[]    
     # for i in range(x+1):
     #     # print("i",i)
@@ -9,16 +9,15 @@ def list_comp(x,y,z,n):
     #         for k in range(z+1):
     #             # print("K",k)
     #             sum=(i+j+k)
-    #             # print(sum)
-    #             if sum!=n:
+    #             # print(sum) 
+    #             if sum!=n: 
     #                 ans.append([i, j, k])
     # print(ans)
-
 
     ##using list compression:
     ans=[[i, j, k]
     for i in range(x+1)
-    for j in range(y+1)
+    for j in range(y+1) 
     for k in range(z+1) 
     if (i+j+k)!=n]
     
