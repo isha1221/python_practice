@@ -15,6 +15,8 @@ class BankAccount():
         self.account_holder=account_holder
         self.balance=balance
         pass
+    
+    
     def deposit(self,amount:float):
         self.balance +=amount
         return self.balance
@@ -35,8 +37,9 @@ balance=float(input("enter your initial balance: "))
 acct_details=BankAccount(name,balance) 
 
 
-service=input("what whould you like to do?\na. Withdraw\nb. deposite\nc. check balnce:\nd. exit \n")
+
 while True:
+    service=input("what whould you like to do?\na. Withdraw\nb. deposite\nc. check balnce:\nd. exit \n")
     if(service=='a'):
         amount=float(input("enter the amount you want to withdraw: "))
         withdraw_amount=acct_details.withdraw(amount)
