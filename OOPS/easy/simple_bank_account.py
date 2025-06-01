@@ -22,7 +22,7 @@ class BankAccount():
         return self.balance
     def withdraw(self,amount:float):
         if(amount>self.balance):
-            print('insufficent balance')
+            return 'insufficent balance'
         else:    
             self.balance -=amount
             return self.balance
@@ -45,7 +45,7 @@ while True:
         withdraw_amount=acct_details.withdraw(amount)
         print(withdraw_amount)
     elif(service=='b'):
-        amount=float(input("enter the amount you want to withdraw: "))
+        amount=float(input("enter the amount you want to deposit: "))
         deposite_amount=acct_details.deposit(amount)
         print(deposite_amount)  
     elif(service=='c'):
