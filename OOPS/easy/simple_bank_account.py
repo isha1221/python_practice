@@ -6,27 +6,10 @@
 # withdraw(amount) – subtracts from balance if sufficient funds
 # display_balance() – prints current balance
 
-# Constraints:
-# Prevent overdrawing by checking the balance before withdrawal. Raise an exception or print a warning if funds are insufficient.
 
-# postgresql://neondb_owner:npg_mRSDIQHw70yd@ep-winter-firefly-a1gpf208-pooler.ap-southeast-1.aws.neon.tech/bank?sslmode=require
 import psycopg2
-# connection_string="postgresql://neondb_owner:npg_mRSDIQHw70yd@ep-winter-firefly-a1gpf208-pooler.ap-southeast-1.aws.neon.tech/bank?sslmode=require"
-# # Connect to the School database
-# conn = psycopg2.connect(connection_string)
-
-# def connection():
-#     base_connection=conn.cursor()
-#     print("connection established")
-#     base_connection.execute("CREATE TABLE Persons (PersonID int,LastName varchar(255),FirstName varchar(255),Address varchar(255),City varchar(255));")
-#     print("table created")
-#     base_connection.close()
-    
-# connection()
 def connect_with_string():
-    # Your Neon connection string format:
-    # postgresql://username:password@hostname:port/database?sslmode=require
-    connection_string = "postgresql://neondb_owner:npg_mRSDIQHw70yd@ep-winter-firefly-a1gpf208-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require"
+    connection_string = "postgresql://neondb_owner:npg_mRSDIQHw70yd@ep-winter-firefly-a1gpf208-pooler.ap-southeast-1.aws.neon.tech/bank?sslmode=require"
 
     try:
         conn = psycopg2.connect(connection_string)
@@ -39,21 +22,18 @@ def connect_with_string():
 
 db = connect_with_string()
 def createTable():
-    db.cursor().execute(
+    cursor = db.cursor()
+    cursor.execute(
         """CREATE TABLE IF NOT EXISTS users (
-        id SERIAL PRIMARY KEY,
-        username VARCHAR(50) UNIQUE NOT NULL,
-        email VARCHAR(100) UNIQUE NOT NULL,
-        password VARCHAR(255) NOT NULL,
-        first_name VARCHAR(50),
-        last_name VARCHAR(50),
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-        is_active BOOLEAN DEFAULT TRUE
-    );"""
+            id SERIAL PRIMARY KEY,
+            username VARCHAR(50) UNIQUE NOT NULL,
+            balance NUMERIC(10, 2) NOT NULL
+        );"""
     )
     db.commit()
+    cursor.close()
     print("Table created successfully!")
+
 
 
 createTable()
