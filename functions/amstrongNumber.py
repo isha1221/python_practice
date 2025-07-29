@@ -38,3 +38,24 @@ if is_armstrong(num):
     print(f"{num} is an Armstrong number!")
 else:
     print(f"{num} is NOT an Armstrong number.")
+
+
+
+def missing_num(nums):
+    nums=sorted(nums)
+    n=len(nums)
+    for i in range(n+1):
+        if i not in nums:
+            print(i)
+            return i    
+nums=[1,2,3,6,7,5,0,9,4]
+missing_num(nums)
+
+def missing_num(nums):
+    # nums=sorted(nums)
+    n=len(nums)
+    ans=sum(range(n+1))-sum(nums) 
+    print(ans) 
+         
+nums=[1,2,3,6,7,5,0,9,4]
+missing_num(nums)
